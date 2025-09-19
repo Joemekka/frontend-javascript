@@ -1,17 +1,11 @@
-import { Teacher } from "./Teacher";
+/// <reference path="./Teacher.ts" />
 
-/**
- * Base Subject class.
- * Holds the teacher reference and exposes setTeacher/getter.
- */
-export default class Subject {
-  protected _teacher: Teacher | null = null;
+namespace Subjects {
+  export class Subject {
+    teacher: Teacher;
 
-  public setTeacher(teacher: Teacher): void {
-    this._teacher = teacher;
-  }
-
-  public get teacher(): Teacher | null {
-    return this._teacher;
+    setTeacher(teacher: Teacher) {
+      this.teacher = teacher;
+    }
   }
 }
